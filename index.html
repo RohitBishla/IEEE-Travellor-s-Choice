@@ -3,6 +3,16 @@
 
 <head>
 	<title>Travellor's Choice</title>
+	<script language="JavaScript">
+// <!--
+function WinOpen() {
+  var url=document.redirect.selection.value
+  document.location.href=url
+
+}
+
+// -->
+</script>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -64,10 +74,10 @@
 					<p data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Find great places to stay, eat,
 						shop, or visit from local experts</p>
 					<div class="block-17 my-4">
-						<form action="" method="post" class="d-block d-flex">
+						<form name="redirect" action="" method="post" class="d-block d-flex">
 							<div class="fields d-block d-flex">
 								<div class="fields d-block d-flex">
-									<select onchange="this.options[this.selectedIndex].value && (window.location = this.options[this.selectedIndex].value);" name="" id="Name" class="form-control" placeholder="Keyword search">
+									<select name="selection" onchange="this.options[this.selectedIndex].value && (window.location = this.options[this.selectedIndex].value);" id="Name" class="form-control" placeholder="Keyword search">
 										<option value="">Where</option>
 										<option value="Bangalore.html">Bengaluru, India</option>
 										<option value="Delhi.html">New Delhi, India</option>
@@ -76,14 +86,14 @@
 									</select>
 								</div>
 							</div>
-							<input type="submit" class="search-submit btn btn-primary" value="Search">
+							<input type="submit" class="search-submit btn btn-primary" value="Search" onClick="WinOpen();">
 						</form>
-						<script>
+						<!-- <script>
 							function mysubmit(){
 
 							window.location.href=document.getElementById('Name').innerHTML='Button Clicked';
 							}
-						</script>
+						</script> -->
 					</div>
 				</div>
 			</div>
